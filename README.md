@@ -18,13 +18,13 @@ A Python-based tool to create malicious PDFs with embedded JavaScript, inject pa
 
 ```bash
 # Create a new PDF with a JS alert payload
-python PDF_JS_Injector.py --payload "app.alert('Hello from PDF!');"
+python PDF_JS_Injector.py --payload "app.alert('JavaScript Executed!');"
 
 # Create using JS from a file
-python PDF_JS_Injector.py --payload-file payload.js --output crafted.pdf
+python PDF_JS_Injector.py --payload-file payload.js --output exploit.pdf
 
 # Inject JS into an existing PDF
-python PDF_JS_Injector.py --inject original.pdf --payload-file payload.js --output injected.pdf
+python PDF_JS_Injector.py --inject input.pdf --payload-file payload.js --output exploit.pdf
 
 # Extract embedded JS from a PDF
 python PDF_JS_Injector.py --extract suspicious.pdf
