@@ -14,17 +14,36 @@ A Python-based tool to create malicious PDFs with embedded JavaScript, inject pa
 
 ---
 
-## 🧪 Examples
+## ✅ Prerequisites
+
+Before running the script, make sure you have the following:
+
+- **Python 3.6 or later**
+- **PyPDF2 version 1.3.0**
+
+Install the required dependency using:
 
 ```bash
+pip install PyPDF2==1.3.0
+```
+
+---
+
+## 🧪 Examples
+
 # Create a new PDF with a JS alert payload
+```bash
 python PDF_JS_Injector.py --payload "app.alert('JavaScript Executed!');"
-
+```
 # Create using JS from a file
+```bash
 python PDF_JS_Injector.py --payload-file payload.js --output exploit.pdf
-
+```
 # Inject JS into an existing PDF
+```bash
 python PDF_JS_Injector.py --inject input.pdf --payload-file payload.js --output exploit.pdf
-
+```
 # Extract embedded JS from a PDF
+```bash
 python PDF_JS_Injector.py --extract suspicious.pdf
+```
